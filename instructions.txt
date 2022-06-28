@@ -1,0 +1,24 @@
+=====================Linux - Ubuntu guide=====================================
+This application suppose that python and pip are installed on your machine,
+if you don't have it, please install them and then start this application guidance.
+
+1) create a folder named as the application, and open it with your code editor
+
+2) do the following command to setup a virtual environment :
+virtualenv -p python3 venv
+
+3) activate the virtual environment by the following command :
+source ./venv/bin/activate
+
+4) then do this command to install dependencies from the requirements.txt file :
+pip install -r requirements.txt
+
+NB : if you have this issue "metadata-generation-failed", do the following steps :
+    sudo apt-get install mysql-server
+then if you are using mysql :
+    sudo apt-get install libmysqlclient-dev 
+OR
+    if you are using mariaDB :
+    sudo apt-get install libmariadbclient-dev
+
+5) 
