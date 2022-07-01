@@ -3,12 +3,14 @@ from flask_sqlalchemy import SQLAlchemy
 import datetime
 from flask_marshmallow import Marshmallow
 import os
+from flask_cors import CORS
 
 from dotenv import load_dotenv
 dotenv_path = os.path.join(os.path.dirname(__file__), '.env')  # Path to .env file
 load_dotenv(dotenv_path)
 
 app = Flask(__name__)
+CORS(app)
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:root@localhost/blog_flask_react'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
